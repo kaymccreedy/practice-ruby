@@ -15,6 +15,10 @@ class Item
     puts "The #{@color} #{@make} #{@model} costs $#{@price}."
   end
 
+  def raise_price
+    @price = 1.05 * @price
+  end
+
 end
 
 item1 = Item.new("Fender", "Stratocaster", "white", 800)
@@ -22,4 +26,7 @@ item2 = Item.new("Gibson", "Les Paul", "black", 1200)
 item3 = Item.new("Gibson", "Firebird", "red", 1000)
 
 p item1
+item1.print_info
+
+item1.raise_price
 item1.print_info
