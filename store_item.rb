@@ -27,8 +27,16 @@ class Item
     @price
   end
 
+  def color=(color)
+    @color = color    
+  end
+
+  def price=(price)
+    @price = price
+  end
+
   def print_info
-    puts "The #{@color} #{@make} #{@model} costs $#{@price}."
+    puts "The #{color} #{make} #{model} costs $#{price}."
   end
 
   def raise_price
@@ -47,5 +55,6 @@ item1.print_info
 item1.raise_price
 item1.print_info
 
-puts item1.make
-puts item1.model
+item1.price = 900
+item1.color = "green"
+item1.print_info
