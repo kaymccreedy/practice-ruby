@@ -54,7 +54,7 @@ class Bike < Vehicle
 
 end
 
-car1 = Car.new( fuel: "gasoline", make: "Ford", model: "Focus" )
+car1 = Car.new( make: "Ford", model: "Focus", fuel: "gasoline" )
 bike1 = Bike.new(  make: "Trek", type: "road", weight: 25 )
 
 pp car1

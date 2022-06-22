@@ -18,16 +18,25 @@ class Vehicle
 
   include ControlVehicle
 
-  attr_reader :speed, :direction
+  attr_reader :speed, :direction, :make
   
-  def initialize
+  def initialize(info)
     @speed = 0
     @direction = 'north'
+    @make = info[:make]
   end
 
 end
 
 class Car < Vehicle
+
+  attr_reader :model, :fuel
+
+  def initialize(info)
+    super
+    @model = info[:model]
+    @fuel = info[:fuel]
+  end
   
   def honk_horn
     puts "Beeeeeeep!"
@@ -36,6 +45,14 @@ class Car < Vehicle
 end
 
 class Bike < Vehicle
+
+  attr_reader :type, :weight
+
+  def initialize(info)
+    super
+    @model = info[:type]
+    @weight = info[:weight]
+  end
   
   def ring_bell
     puts "Ring ring!"
@@ -43,8 +60,8 @@ class Bike < Vehicle
 
 end
 
-car1 = Car.new
-bike1 = Bike.new
+car1 = Car.new( make: "Ford", model: "Focus", fuel: "gasoline" )
+bike1 = Bike.new(  make: "Trek", type: "road", weight: 25 )
 
 pp car1
 pp bike1
