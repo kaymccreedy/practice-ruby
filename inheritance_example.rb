@@ -1,4 +1,4 @@
-class Car
+class Vehicle
 
   attr_reader :speed, :direction
 
@@ -18,17 +18,23 @@ class Car
   def turn(new_direction)
     @direction = new_direction
   end
+  
+end
+
+class Car < Vehicle
 
   def honk_horn
     puts "Beeeeeeep!"
   end
+
 end
 
-class Bike < Car
+class Bike < Vehicle
 
   def ring_bell
     puts "Ring ring!"
   end
+
 end
 
 car1 = Car.new
