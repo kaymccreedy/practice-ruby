@@ -14,14 +14,6 @@ class Item
     @price = price
   end
 
-  def color=(color)
-    @color = color    
-  end
-
-  def price=(price)
-    @price = price
-  end
-
   def print_info
     puts "The #{color} #{make} #{model} costs $#{price}."
   end
