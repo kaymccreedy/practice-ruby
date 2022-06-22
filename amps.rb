@@ -20,27 +20,11 @@ class Guitar
 
 end
 
-class Amp
 
-  attr_reader :make, :model, :color, :price, :type, :wattage
-  attr_writer :color, :price
+class Amp < Guitar
 
-  def initialize(options)
-    @make = options[:make]
-    @model = options[:model]
-    @color = options[:color]
-    @price = options[:price]
-    @type = options[:type]
-    @wattage = options[:wattage]
-  end
-
-  def print_info
-    puts "The #{make} #{model} costs $#{price}."
-  end
-
-  def raise_price
-    @price = 1.05 * @price
-  end
+  attr_writer :type, :wattage
+  attr_reader :type, :wattage
 
   def test_amp
     if @type == "tube"
@@ -51,3 +35,6 @@ class Amp
   end
 
 end
+
+amp1 = Amp.new( make: "Fender", model: "Deluxe Reverb", color: "black", price: 1000, type: "tube", wattage: 50 )
+amp1.print_info
