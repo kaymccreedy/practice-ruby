@@ -58,3 +58,9 @@ item1.print_info
 item1.price = 900
 item1.color = "green"
 item1.print_info
+
+item4 = Item.new("Squire", "Telecaster", "blue", 500)
+5.times do
+  item4.raise_price
+  item4.print_info
+end
