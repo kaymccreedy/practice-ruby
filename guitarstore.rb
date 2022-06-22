@@ -48,13 +48,18 @@ class Amp < Item
 
 end
 
-class Food < Item
+class Strings < Item
 
-  attr_reader :shelf_life
+  attr_reader :gauge, :wind
 
   def initialize(options)
     super
-    @shelf_life = options[:shelf_life]
+    @gauge = options[:gauge]
+    @wind = options[:wind]
+  end
+
+  def print_info
+    puts "The #{wind} #{gauge}-gauge #{make} strings cost $#{price}."
   end
 
 end
@@ -67,6 +72,5 @@ pp amp1
 amp1.print_info
 amp1.test_amp
 
-food1 = Food.new( shelf_life: "5 days" )
-pp food1
-p food1.shelf_life
+strings1 = Strings.new( make: "Stringjoy", gauge: "11-56", wind: "round-wound", price: 11 )
+strings1.print_info
