@@ -37,7 +37,5 @@ item1.color = "green"
 item1.print_info
 
 item4 = Item.new( make: "Squire", model: "Telecaster", color: "blue", price: 500 )
-5.times do
-  item4.raise_price
-  item4.print_info
-end
+item4.raise_price
+item4.print_info
