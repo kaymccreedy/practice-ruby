@@ -67,6 +67,7 @@ pp car1
 pp bike1
 
 car1.accelerate
+car1.accelerate
 bike1.accelerate
 
 puts car1.speed
