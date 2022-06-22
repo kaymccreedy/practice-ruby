@@ -4,27 +4,14 @@ item3 = { :make => "Gibson", :model => "Firebird", :color => "red", :price => 10
 
 class Item
 
+  attr_reader :make, :model, :color, :price
+  attr_writer :color, :price
+
   def initialize(make, model, color, price)
     @make = make
     @model = model
     @color = color
     @price = price
-  end
-
-  def make
-    @make
-  end
-
-  def model
-    @model
-  end
-
-  def color
-    @color
-  end
-
-  def price
-    @price
   end
 
   def color=(color)
