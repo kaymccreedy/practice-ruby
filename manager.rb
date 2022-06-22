@@ -47,11 +47,28 @@ class Manager < Employee
     end
   end
 
+  def give_annual_raise
+    @salary = 1.1 * @salary
+  end
+
+  def print_info
+    super
+    puts "#{first_name} #{last_name} is a manager."
+  end
+
 end
 
 manager = Manager.new(first_name: "Saron", last_name: "Yitbarek", salary: 100000, active: true, employees: [employee1, employee2])
 manager.print_info
 manager.send_report
 manager.give_all_raises
+pp manager
+puts
+puts
 manager.fire_all_employees
 pp manager
+puts
+puts
+manager.give_annual_raise
+pp manager
+manager.print_info
