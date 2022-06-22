@@ -24,6 +24,7 @@ class Guitar < Item
 
   def initialize(options)
     super
+    @scale_length = options[:scale_length]
   end
 
 end
@@ -47,7 +48,7 @@ class Amp < Item
 
 end
 
-guitar1 = Guitar.new( make: "Fender", model: "Stratocaster", color: "white", price: 800 )
+guitar1 = Guitar.new( make: "Fender", model: "Stratocaster", color: "white", price: 800, scale_length: 25.5 )
 pp guitar1
 
 amp1 = Amp.new( make: "Fender", model: "Deluxe Reverb", color: "black", price: 1000, type: "tube", wattage: 50 )
