@@ -2,9 +2,10 @@ class Vehicle
 
   attr_reader :speed, :direction
 
-  def initialize
+  def initialize(info)
     @speed = 0
     @direction = 'north'
+    @make = info[:make]
   end
 
   def brake
@@ -23,6 +24,14 @@ end
 
 class Car < Vehicle
 
+  attr_reader :fuel, :model
+
+  def initialize(info)
+    super
+    @fuel = info[:fuel]
+    @model = info[:model]
+  end
+
   def honk_horn
     puts "Beeeeeeep!"
   end
@@ -31,14 +40,25 @@ end
 
 class Bike < Vehicle
 
+  attr_reader :type, :weight
+
+  def initialize(info)
+    super
+    @type = info[:type]
+    @weight = info[:weight]
+  end
+
   def ring_bell
     puts "Ring ring!"
   end
 
 end
 
-car1 = Car.new
-bike1 = Bike.new
+car1 = Car.new( fuel: "gasoline", make: "Ford", model: "Focus" )
+bike1 = Bike.new(  make: "Trek", type: "road", weight: 25 )
+
+pp car1
+pp bike1
 
 car1.accelerate
 bike1.accelerate

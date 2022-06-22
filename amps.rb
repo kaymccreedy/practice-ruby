@@ -48,6 +48,17 @@ class Amp < Item
 
 end
 
+class Food < Item
+
+  attr_reader :shelf_life
+
+  def initialize(options)
+    super
+    @shelf_life = options[:shelf_life]
+  end
+
+end
+
 guitar1 = Guitar.new( make: "Fender", model: "Stratocaster", color: "white", price: 800, scale_length: 25.5 )
 pp guitar1
 
@@ -55,3 +66,7 @@ amp1 = Amp.new( make: "Fender", model: "Deluxe Reverb", color: "black", price: 1
 pp amp1
 amp1.print_info
 amp1.test_amp
+
+food1 = Food.new( shelf_life: "5 days" )
+pp food1
+p food1.shelf_life
