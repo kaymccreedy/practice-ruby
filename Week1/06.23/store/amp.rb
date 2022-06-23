@@ -1,19 +1,23 @@
 require "./item.rb"
 
-class Amp < Item
+module Actualize
 
-  def initialize(options)
-    super
-    @type = options[:type]
-    @wattage = options[:wattage]
-  end
+  class Amp < Item
 
-  def test_amp
-    if @type == "tube"
-      puts "Warming up..."
+    def initialize(options)
+      super
+      @type = options[:type]
+      @wattage = options[:wattage]
     end
-    puts "Testing..." 
-    puts "It works!"
+
+    def test_amp
+      if @type == "tube"
+        puts "Warming up..."
+      end
+      puts "Testing..." 
+      puts "It works!"
+    end
+
   end
 
 end

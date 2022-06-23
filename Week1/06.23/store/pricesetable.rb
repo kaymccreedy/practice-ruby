@@ -1,7 +1,11 @@
-module PriceSetable
+module Actualize
 
-  def price=(price)
-    @price = price.to_i
+  module PriceSetable
+
+    def price=(price)
+      @price = price.to_i
+    end
+
   end
 
 end

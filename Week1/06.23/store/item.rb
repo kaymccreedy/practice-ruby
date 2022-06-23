@@ -1,24 +1,28 @@
 require "./pricesetable.rb"
 
-class Item
+module Actualize
 
-  include PriceSetable
+  class Item
 
-  attr_accessor :make, :model, :color, :price, :type, :wattage, :gauge, :wind
+    include PriceSetable
 
-  def initialize(options)
-    @make = options[:make]
-    @model = options[:model]
-    @color = options[:color]
-    @price = options[:price]
-  end
+    attr_accessor :make, :model, :color, :price, :type, :wattage, :gauge, :wind
 
-  def print_info
-    puts "The #{color} #{make} #{model} costs $#{price}."
-  end
+    def initialize(options)
+      @make = options[:make]
+      @model = options[:model]
+      @color = options[:color]
+      @price = options[:price]
+    end
 
-  def raise_price
-    @price = 1.05 * @price
+    def print_info
+      puts "The #{color} #{make} #{model} costs $#{price}."
+    end
+
+    def raise_price
+      @price = 1.05 * @price
+    end
+
   end
 
 end

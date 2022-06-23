@@ -1,15 +1,19 @@
 require "./item.rb"
 
-class Strings < Item
+module Actualize
 
-  def initialize(options)
-    super
-    @gauge = options[:gauge]
-    @wind = options[:wind]
-  end
+  class Strings < Item
 
-  def print_info
-    puts "The #{wind} #{gauge}-gauge #{make} strings cost $#{price}."
+    def initialize(options)
+      super
+      @gauge = options[:gauge]
+      @wind = options[:wind]
+    end
+
+    def print_info
+      puts "The #{wind} #{gauge}-gauge #{make} strings cost $#{price}."
+    end
+
   end
 
 end
