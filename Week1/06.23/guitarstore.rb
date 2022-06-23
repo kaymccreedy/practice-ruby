@@ -10,8 +10,7 @@ class Item
 
   include PriceSetable
 
-  attr_reader :make, :model, :color, :price, :type, :wattage
-  attr_writer :color, :price
+  attr_accessor :make, :model, :color, :price, :type, :wattage
 
   def initialize(options)
     @make = options[:make]
@@ -60,7 +59,7 @@ end
 
 class Strings < Item
 
-  attr_reader :gauge, :wind
+  attr_accessor :gauge, :wind
 
   def initialize(options)
     super
