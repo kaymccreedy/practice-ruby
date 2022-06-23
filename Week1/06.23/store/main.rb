@@ -16,3 +16,6 @@ strings1.print_info
 
 guitar1.price=(100)
 guitar1.print_info
+
+strings1.price=(10)
+strings1.print_info
